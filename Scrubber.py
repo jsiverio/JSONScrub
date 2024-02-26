@@ -25,7 +25,7 @@ class Scrubber:
         '''_summary_    = "This function is used to open the JSON file and check if it is a VICS data model"'''
         
         try:
-            f = open(self.jsonSourcePath, "r")
+            f = open(self.jsonSourcePath, "r",encoding="utf-8")
         except OSError as e:
             print(e.strerror)
             exit(1)
