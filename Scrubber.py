@@ -60,13 +60,14 @@ class Scrubber:
                 del data['value'][0]['Media'][i]['AlternativeHashes'][0]['HashName']
                 del data['value'][0]['Media'][i]['AlternativeHashes'][0]['HashValue']
 
-        dataOut = json.dumps(data, indent=2)
+        dataOut = json.dumps(data, indent=2, escape_forward_slashes=False)
         newFileName = self.fileName.replace(".json", "_scrubbed.json")
         
         try:
-            f = open(os.path.join(self.path,newFileName), "w")
+            f = open(os.path.join(self.path,newFileName), "w", encoding="utf-8")
             f.write(dataOut)
             f.close()
+            
         except OSError as e:
             print(e.strerror)
             exit(1)
