@@ -8,7 +8,7 @@ By running the script, you can easily remove the hash value from the JSON file, 
 
 Usage
 ---
-PDNAScrubber.exe path/to/VICS_file.json
+PDNAScrubber.exe path/to/VICS_file.json   
 To run the script, enter the path and filename of the JSON file and press enter. The script will generate a new file that is scrubbed of all PhotoDNA.
 
 
