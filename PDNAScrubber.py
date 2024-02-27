@@ -12,6 +12,6 @@ def main():
         scrubber.scrub()
     else:
         print("Usage: PDNAScrubber.py <path to JSON file>")
-        exit(1)
+        sys.exit(1)
 
 main()

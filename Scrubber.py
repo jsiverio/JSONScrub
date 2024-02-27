@@ -28,7 +28,7 @@ class Scrubber:
             f = open(self.jsonSourcePath, "r",encoding="utf-8")
         except OSError as e:
             print(e.strerror)
-            exit(1)
+            sys.exit(1)
 
         data = json.load(f)
         f.close()
@@ -40,7 +40,7 @@ class Scrubber:
                 raise ValueError("Invalid JSON file")
         except ValueError as err:
             print(str(err))
-            exit(1)
+            sys.exit(1)
     
        
     def scrub(self):
@@ -70,7 +70,7 @@ class Scrubber:
             
         except OSError as e:
             print(e.strerror)
-            exit(1)
+            sys.exit(1)
     
     def _fileInfo(self, data,fileCount):
         '''_summary_    = "This function is used to display the file details of the JSON file"'''
